@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
+</head>
+<body>
+<header class="header">
+   <div class="vertical-navigation">
+       <div class="menu">
+            <div class="menu__item"></div>
+            <div class="menu__item menu__item_center"></div>
+            <div class="menu__item"></div>
+       </div>
+       <div><img class="logo" src="img/logo.svg" alt=""></div>
+   </div>
+<div class="search">
+<div class="information-salon">
+    NEAREST SALON
+    <img class="mark" src="img/ico_dropdown.svg" alt="">
+    <br>
+    Plush Salon 92101
+</div>
+    <div class="container"><img class="container__magnifier" src="img/ico_search.svg" alt=""></div>
+</div>
+
+</header>
+<nav class="navigation">
+    <div class="container-navigation">
+        <ul class="navigation__menu">
+            <% const menu = ['HAIRCARE', 'COLOR', 'STYLING', 'TEXTURE', 'GET INSPIRED','SOCIAL','NEWS','ABOUT','PROFESSIONAL'] %>
+            <% menu.forEach(function(item) { %>
+            <li class="navigation__item">
+                <a href="#" class="navigation__link"><%= item %></a>
+            </li>
+            <% }); %>
+        </ul>
+    </div>
+</nav>
+<main>
+    <div class="location">
+        HOME/<span class="red">VIDEOS</span>
+    </div>
+    <span class="page-title">VIDEOS</span>
+    <div class="wrap">
+        <a data-fancybox href="https://www.youtube.com/embed/z8M0Fa1JVco?showinfo=0">
+            <img class="title-frame" src="https://img.youtube.com/vi/z8M0Fa1JVco/maxresdefault.jpg" alt="">
+        </a>
+        <div class ="description">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </div>
+    </div>
+    <div class="border"><hr></div>
+    <div class="section-name">STEP <span class="red">BY</span> STEP</div>
+    <div class="flex">
+    <div class="thumb-wrap">
+        <% const step = [
+            {padding:'padding',link: 'Wi2KcdoCuo4', style: 'frame'},
+            {padding:'padding',link: '8H6dYUgQKB8', style: 'frame frame_pad'},
+            {padding:'padding',link: 'PZjGrmHdFME',style : 'frame frame_pad'}
+        ]; %>
+        <% step.forEach((item) => { %>
+        <a class="<%= item.padding; %>" data-fancybox href="https://youtu.be/<%= item.link; %>?showinfo=0"><img class="<%= item.style; %>" src="https://img.youtube.com/vi/<%= item.link; %>/maxresdefault.jpg" alt=""></a>
+        <% }) %>
+    </div>
+    </div>
+    <div class="load-button"><input class="button" type="button" value="LOAD MORE"></div>
+    <div class="section-name">CRAFT <span class="red">EDUCATION</span></div>
+   <div class="flex">
+    <div class="thumb-wrap">
+        <% const craft = [
+            {padding:'padding',link: 'RmNWNLXmswk',style:'frame'},
+            {padding:'padding',link: '-tztXOz8Vc0',style:'frame frame_pad'},
+            {padding:'padding',link: 'kUfIVtyydgQ',style:'frame frame_pad'}
+        ]; %>
+        <% craft.forEach((item) => { %>
+        <a class="<%= item.padding; %>" data-fancybox href="https://youtu.be/<%= item.link; %>?showinfo=0"><img class="<%= item.style; %>" src="https://img.youtube.com/vi/<%= item.link; %>/maxresdefault.jpg" alt=""></a>
+        <% }) %>
+    </div>
+    </div>
+    <div class="load-button"><input class="button" type="button" value="LOAD MORE"></div>
+    <div class="section-name">INSPIRATION</div>
+    <div class="flex">
+    <div class="thumb-wrap">
+        <% const inspiration = [
+            {padding:'padding',link: 'VmmwwzR536g', style: 'frame'},
+            {padding:'padding',link: '6oPBFnsqJW8', style: 'frame frame_pad'},
+            {padding:'padding',link: '_wLGr24VeoI',style : 'frame frame_pad'}
+        ]; %>
+        <% inspiration.forEach((item) => { %>
+        <a class="<%= item.padding; %>" data-fancybox href="https://youtu.be/<%= item.link; %>?showinfo=0"><img class="<%= item.style; %>" src="https://img.youtube.com/vi/<%= item.link; %>/maxresdefault.jpg" alt=""></a>
+        <% }) %>
+    </div>
+    <div class="load-button"><input class="button" type="button" value="LOAD MORE"></div>
+
+</main>
+<footer class="footer">
+<div class="social">
+    <% const social = [
+        {title: 'img/ico_facebook.svg', link: '#'},
+        {title: 'img/ico_twitter.svg', link: '#'},
+        {title: 'img/ico_pinterest.svg', link: '#'},
+        {title: 'img/ico_youtube.svg', link: '#'},
+        {title: 'img/ico_instagram.svg', link: '#'}
+    ]; %>
+    <% social.forEach((item) => { %>
+    <a class="social__icon" href="<%= item.link; %>"><img class="svg" src="<%= item.title; %>" alt=""></a>
+    <% }) %>
+</div>
+    <div class="information">
+        <span class="grey">LOCATION:</span>UNITED STATES
+        <br>
+        <span class="grey">LANGUEGE:</span>ENGLISH
+    </div>
+    <div class="support">
+        <a class="link" href="#"> PRIVACY POLICY</a> &nbsp;<a href="#" class="link">TERMS OF USE</a> &nbsp; <a href="#" class="link">CONTACT US</a><br>
+        <a href="#" class="link">NEWSLETTER</a> &nbsp; <a href="#" class="link">SITE MAP</a>
+    </div>
+</footer>
+<script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js"></script>
+<script src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+<script src="js/scripts.js"></script>
+</body>
+</html>
