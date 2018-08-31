@@ -13,27 +13,29 @@
 </head>
 <body>
 <header class="header">
-   <div class="vertical-navigation">
-       <div class="menu">
+    <div class="header__top">
+        <div class="menu">
             <div class="menu__item"></div>
             <div class="menu__item menu__item_center"></div>
             <div class="menu__item"></div>
-       </div>
-       <div><img class="logo" src="img/logo.svg" alt=""></div>
-   </div>
-<div class="search">
-<div class="information-salon">
-    NEAREST SALON
-    <img class="mark" src="img/ico_dropdown.svg" alt="">
-    <br>
-    Plush Salon 92101
-</div>
-    <div class="container"><img class="container__magnifier" src="img/ico_search.svg" alt=""></div>
-</div>
-
+        </div>
+        <div class="logo header__logo">
+            <img class="logo__img" src="img/logo.svg" alt="">
+        </div>
+    </div>
+    <div class="header__bottom">
+        <div class="salon-information">
+            NEAREST SALON
+            <img class="ico mark" src="img/ico_dropdown.svg" alt="">
+            <br>
+            Plush Salon 92101
+        </div>
+        <div class="search header__search">
+            <img class="ico search__ico" src="img/ico_search.svg" alt="">
+        </div>
+    </div>
 </header>
 <nav class="navigation">
-    <div class="container-navigation">
         <ul class="navigation__menu">
             <% const menu = ['HAIRCARE', 'COLOR', 'STYLING', 'TEXTURE', 'GET INSPIRED','SOCIAL','NEWS','ABOUT','PROFESSIONAL'] %>
             <% menu.forEach(function(item) { %>
@@ -42,14 +44,13 @@
             </li>
             <% }); %>
         </ul>
-    </div>
 </nav>
-<main>
+<main class="main">
     <div class="location">
         HOME/<span class="red">VIDEOS</span>
     </div>
     <span class="page-title">VIDEOS</span>
-    <div class="wrap">
+    <div class="title-content">
         <a data-fancybox href="https://www.youtube.com/embed/z8M0Fa1JVco?showinfo=0">
             <img class="title-frame" src="https://img.youtube.com/vi/z8M0Fa1JVco/maxresdefault.jpg" alt="">
         </a>
@@ -59,12 +60,12 @@
     </div>
     <div class="border"><hr></div>
     <div class="section-name">STEP <span class="red">BY</span> STEP</div>
-    <div class="flex">
+    <div class="content">
     <div class="thumb-wrap">
         <% const step = [
-            {padding:'padding',link: 'Wi2KcdoCuo4', style: 'frame'},
-            {padding:'padding',link: '8H6dYUgQKB8', style: 'frame frame_pad'},
-            {padding:'padding',link: 'PZjGrmHdFME',style : 'frame frame_pad'}
+            {padding:'pop-up',link: 'Wi2KcdoCuo4', style: 'frame'},
+            {padding:'pop-up',link: '8H6dYUgQKB8', style: 'frame frame_pad'},
+            {padding:'pop-up',link: 'PZjGrmHdFME',style : 'frame frame_pad'}
         ]; %>
         <% step.forEach((item) => { %>
         <a class="<%= item.padding; %>" data-fancybox href="https://youtu.be/<%= item.link; %>?showinfo=0"><img class="<%= item.style; %>" src="https://img.youtube.com/vi/<%= item.link; %>/maxresdefault.jpg" alt=""></a>
@@ -73,12 +74,12 @@
     </div>
     <div class="load-button"><input class="button" type="button" value="LOAD MORE"></div>
     <div class="section-name">CRAFT <span class="red">EDUCATION</span></div>
-   <div class="flex">
+   <div class="content">
     <div class="thumb-wrap">
         <% const craft = [
-            {padding:'padding',link: 'RmNWNLXmswk',style:'frame'},
-            {padding:'padding',link: '-tztXOz8Vc0',style:'frame frame_pad'},
-            {padding:'padding',link: 'kUfIVtyydgQ',style:'frame frame_pad'}
+            {padding:'pop-up',link: 'RmNWNLXmswk',style:'frame'},
+            {padding:'pop-up',link: '-tztXOz8Vc0',style:'frame frame_pad'},
+            {padding:'pop-up',link: 'kUfIVtyydgQ',style:'frame frame_pad'}
         ]; %>
         <% craft.forEach((item) => { %>
         <a class="<%= item.padding; %>" data-fancybox href="https://youtu.be/<%= item.link; %>?showinfo=0"><img class="<%= item.style; %>" src="https://img.youtube.com/vi/<%= item.link; %>/maxresdefault.jpg" alt=""></a>
@@ -87,19 +88,19 @@
     </div>
     <div class="load-button"><input class="button" type="button" value="LOAD MORE"></div>
     <div class="section-name">INSPIRATION</div>
-    <div class="flex">
+    <div class="content">
     <div class="thumb-wrap">
         <% const inspiration = [
-            {padding:'padding',link: 'VmmwwzR536g', style: 'frame'},
-            {padding:'padding',link: '6oPBFnsqJW8', style: 'frame frame_pad'},
-            {padding:'padding',link: '_wLGr24VeoI',style : 'frame frame_pad'}
+            {padding:'pop-up',link: 'VmmwwzR536g', style: 'frame'},
+            {padding:'pop-up',link: '6oPBFnsqJW8', style: 'frame frame_pad'},
+            {padding:'pop-up',link: '_wLGr24VeoI',style : 'frame frame_pad'}
         ]; %>
         <% inspiration.forEach((item) => { %>
         <a class="<%= item.padding; %>" data-fancybox href="https://youtu.be/<%= item.link; %>?showinfo=0"><img class="<%= item.style; %>" src="https://img.youtube.com/vi/<%= item.link; %>/maxresdefault.jpg" alt=""></a>
         <% }) %>
     </div>
     <div class="load-button"><input class="button" type="button" value="LOAD MORE"></div>
-
+    </div>
 </main>
 <footer class="footer">
 <div class="social">

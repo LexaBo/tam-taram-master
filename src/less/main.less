@@ -1,31 +1,43 @@
 @import 'media';
 
-
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-.header{
+.header {
     background-color: #60c;
-}
 
-.vertical-navigation{
-    padding: 23px 0;
+    &__top {
+        padding: 23px 20px;
 
-    @media @tablet{
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
+        @media @tablet {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__bottom {
+        background-color: #333;
+        padding: 12.5px 20px;
+        display: flex;
+        justify-content: space-between;
+
+        @media @tablet {
+            padding: 22px 25px 18px 16px;
+            background-color: #60c;
+        }
+
+        @media @desktop {
+            padding: 17px 37px 19px 38px;
+        }
     }
 }
 
-.logo{
-    width: 235px;
-    padding-left: 15px;
-
-    @media @tablet{
-        padding-left: 0;
+.logo {
+    &__img{
+        width: 235px;
     }
 }
 
@@ -33,15 +45,14 @@
     float: left;
     width: 30px;
     height: 20px;
-    padding-left: 20px;
+    margin-right: 15px;
 
-    @media @tablet{
+    @media @tablet {
         display: none;
     }
 
     &__item {
-        width: 30px;
-        height: 2px;
+        height: 3px;
         background-color: #fff;
 
         &_center {
@@ -50,43 +61,33 @@
     }
 }
 
-.search{
-    background-color: #333;
-    padding: 12.5px 20px;
-    display: flex;
-    justify-content: space-between;
-
-    @media @tablet{
-        padding: 22px 25px 18px 16px;
-        background-color: #60c;
-    }
-    @media @desktop{
-        padding: 17px 37px 19px 38px;
-    }
-}
-
-.information-salon{
+.salon-information {
     font-size: 12px;
     color: #fff;
     font-family: 'PT Sans', sans-serif;
 }
 
-.container{
-    &__magnifier{
+.search {
+    &__ico {
         width: 23px;
         height: 24px;
     }
 }
 
-.mark{
+.mark {
     width: 10px;
 }
 
-
 .navigation {
-    display: none;
+    @media @phone {
+        display: none;
+        position: absolute;
+        background: #262626;
+        padding: 30px;
+    }
 
     @media @tablet {
+        position: inherit;
         background: #262626;
         display: flex;
         justify-content: center;
@@ -98,66 +99,86 @@
     }
 
     &__link {
-        font-size: 14px;
-        font-family: 'PT Sans', sans-serif;
-        color: #737373;
         text-decoration: none;
-        text-align: left;
-    }
+        color: #737373;
+        font-family: 'PT Sans', sans-serif;
+        font-size: 24px;
+        text-align: center;
 
-    &:focus {
-        color: black;
+        @media @tablet {
+            font-size: 14px;
+            text-align: left;
+        }
+
+        &:focus {
+            color: red;
+        }
     }
 
     &__item {
-        float: left;
-        margin-right: 24px;
+        @media @phone-strict{
+            margin-bottom: 10px;
+        }
 
-        @media @desktop{
+        @media @tablet {
+            float: left;
+            margin-right: 24px;
+        }
+
+        @media @desktop {
             margin-right: 47px;
         }
     }
 }
 
+.main {
+    padding-right: 15px;
+    padding-left: 15px;
 
-.location{
-    padding: 18px 0 33px 9px;
+    @media @tablet {
+        padding-right: 43px;
+        padding-left: 43px;
+    }
+}
+
+.location {
+    padding-top: 18px;
+    padding-bottom: 33px;
     font-size: 14px;
     font-family: 'PT Sans', sans-serif;
 
     @media @tablet {
-        padding: 42px 0 25px 43px;
+        padding-top: 42px;
+        padding-bottom: 25px;
     }
 
-    @media @desktop{
-        padding: 14px 0 66px 40px;
+    @media @desktop {
+        padding-top: 14px;
+        padding-bottom: 66px;
     }
 }
 
-.red{
+.red {
     color: red;
 }
 
-.page-title{
+.page-title {
     display: inline-block;
     font-size: 28px;
     padding-bottom: 18px;
-    padding-left: 8px;
     font-family: 'PT Sans', sans-serif;
     font-weight: 700;
 
     @media @tablet {
         padding-bottom: 64px;
-        padding-left: 41px;
     }
 
-    @media @desktop{
+    @media @desktop {
         padding-bottom: 32px;
-        padding-left: 242px;
     }
 }
 
-.flex{
+.content {
     @media @tablet {
         display: flex;
         justify-content: center;
@@ -166,7 +187,7 @@
     }
 }
 
-.wrap{
+.title-content {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -176,15 +197,16 @@
 .thumb-wrap {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
     align-items: center;
+    flex-wrap: wrap;
 
     @media @tablet {
         width: 625px;
+        flex-wrap: wrap;
     }
 }
 
-.title-frame{
+.title-frame {
     width: 300px;
     height: 150px;
 
@@ -193,32 +215,32 @@
         height: 345px;
     }
 
-    @media @desktop{
+    @media @desktop {
         width: 960px;
         height: 495px;
     }
 }
 
-.padding{
+.pop-up{
     padding-top: 45px;
-    &:first-child{
+
+    &:first-child {
         padding-top: 0;
     }
-    @media @phone-large{
-        padding: 0 10px 10px;
+    @media @phone-large {
+        padding: 0;
     }
 }
 
-.frame{
+.frame {
     width: 300px;
-    height: 150px;
-    &:first-child{
+
+    &:first-child {
         padding-top: 0;
     }
 }
 
-.description{
-    padding-left: 10px;
+.description {
     padding-top: 18px;
     font-family: 'PT Sans', sans-serif;
     font-weight: 700;
@@ -227,41 +249,29 @@
         width: 670px;
     }
 
-    @media @desktop{
+    @media @desktop {
         width: 960px;
     }
 }
 
-.border{
-    padding: 15px 10px 63px;
+.border {
+    padding-top: 15px;
+    padding-bottom: 63px;
 
     @media @tablet {
         padding-top: 20px;
-        padding-left: 43px;
-        padding-right: 43px;
     }
 
-    @media @desktop{
+    @media @desktop {
         padding-top: 28px;
-        padding-left: 242px;
-        padding-right: 242px;
     }
 }
 
-.section-name{
+.section-name {
     padding-bottom: 13px;
-    padding-left: 15px;
     font-size: 30px;
     font-family: 'PT Sans', sans-serif;
     font-weight: bold;
-
-    @media @tablet {
-        padding-left: 72px;
-    }
-
-    @media @desktop{
-        padding-left: 242px;
-    }
 }
 
 .load-button {
@@ -286,15 +296,16 @@
     margin-bottom: 90px;
 }
 
-
-.footer{
+.footer {
     margin-top: 40px;
     background-color: #262626;
+    padding-left: 18px;
+    padding-right: 18px;
 }
 
-.social{
-    padding-left: 13px;
+.social {
     padding-top: 30px;
+
     @media @tablet {
         position: absolute;
         left: 50%;
@@ -305,12 +316,11 @@
 
 .svg {
     height: 20px;
-    padding-right: 20px;
+    margin-right: 20px;
 }
 
-.information{
+.information {
     font-size: 12px;
-    padding-left: 13px;
     padding-top: 30px;
     padding-bottom: 45px;
     color: #cdcdcd;
@@ -321,14 +331,13 @@
         padding: 15px 19px 23px 0;
     }
 
-    @media @desktop{
+    @media @desktop {
         padding: 15px 39px 15px 0;
     }
 }
 
 .support {
     font-size: 12px;
-    padding-left: 13px;
     padding-top: 30px;
     padding-bottom: 150px;
     color: #5b5b5b;
@@ -337,46 +346,41 @@
     @media @tablet {
         padding-top: 16px;
         padding-bottom: 21px;
-        padding-left: 13px;
     }
 
-    @media @desktop{
+    @media @desktop {
         padding-top: 16px;
         padding-bottom: 14px;
-        padding-left: 39px;
     }
 }
-
 
 .svg path {
     fill: #cdcdcd;
-    height: 20px;
-    padding-right: 20px;
-    padding-bottom: 35px;
 }
 
-.grey{
+.grey {
     color: #777;
 }
 
-.link{
+.link {
     text-decoration: none;
     color: inherit;
 }
 
-.slick-prev{
-    left: -25px;
+.slick-prev {
+    left: -45px;
+    transform: rotate(300deg);
 }
 
-
-.slick-next{
-    right: -30px;
+.slick-next {
+    right: -20px;
+    transform: rotate(45deg);
 }
 
-
-.slick-arrow{
+.slick-arrow {
     position: absolute;
     top: 50%;
+    transform: translateY(-50%);
     z-index: 1000;
     display: inline-block;
     width: 30px;
@@ -385,11 +389,22 @@
     line-height: 30px;
     text-align: center;
     font-weight: bold;
-    color: #fff;
-    background-color: rgba(0,0,0,.4);
     cursor: pointer;
 }
 
+.arrow{
+    transform: rotate(90deg);
+    height: 28px;
+}
 
 
+.arrows {
+    transform: rotate(-90deg);
+    height: 28px;
+}
+
+.fixed {
+    position: fixed;
+    width: 100%;
+}
 
