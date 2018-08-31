@@ -1,3 +1,28 @@
+function TakeImgTransformToSvg(){
+    jQuery('img.svg').each(function(){
+        const $img = jQuery(this);
+        const imgID = $img.attr('id');
+        const imgClass = $img.attr('class');
+        const imgURL = $img.attr('src');
+
+        jQuery.get(imgURL, function(data) {
+            let $svg = jQuery(data).find('svg');
+
+            if(typeof imgID !== 'undefined') {
+                $svg = $svg.attr('id', imgID);
+            }
+            if(typeof imgClass !== 'undefined') {
+                $svg = $svg.attr('class', imgClass+' replaced-svg');
+            }
+
+            $svg = $svg.removeAttr('xmlns:a');
+
+            $img.replaceWith($svg);
+
+        }, 'xml');
+
+    });
+}
 const slick = {
     init: function() {
         this.cache();
@@ -10,6 +35,7 @@ const slick = {
     },
     events: function() {
         $(window).on('resize', function() {
+            TakeImgTransformToSvg();
             slick.toggleSliders();
         });
     },
@@ -19,8 +45,8 @@ const slick = {
             slidesToScroll: 1,
             infinite: true,
             arrows:true,
-            prevArrow:'<span class="slick-prev"></span>',
-            nextArrow:'<span class="slick-next"></span>',
+            prevArrow:'<span class="slick-prev"><img class="svg arrow" src="img/ico_dropdown.svg" alt=""></span>',
+            nextArrow:'<span class="slick-next"><img class="svg arrows" src="img/ico_dropdown.svg" alt=""></span>',
             mobileFirst: true,
             responsive: [
                 {
@@ -53,30 +79,8 @@ const slick = {
 
 $(document).ready(function () {
     slick.init();
+    TakeImgTransformToSvg();
 
-    jQuery('img.svg').each(function(){
-        const $img = jQuery(this);
-        const imgID = $img.attr('id');
-        const imgClass = $img.attr('class');
-        const imgURL = $img.attr('src');
-
-        jQuery.get(imgURL, function(data) {
-            let $svg = jQuery(data).find('svg');
-
-            if(typeof imgID !== 'undefined') {
-                $svg = $svg.attr('id', imgID);
-            }
-            if(typeof imgClass !== 'undefined') {
-                $svg = $svg.attr('class', imgClass+' replaced-svg');
-            }
-
-            $svg = $svg.removeAttr('xmlns:a');
-
-            $img.replaceWith($svg);
-
-        }, 'xml');
-
-    });
 });
 
 $('.menu').on('click', function() {
