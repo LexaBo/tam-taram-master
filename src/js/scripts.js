@@ -57,7 +57,7 @@ const slick = {
                 {
                     breakpoint: 768,
                     settings:'slick'
-                }
+                },
             ]
         });
     },

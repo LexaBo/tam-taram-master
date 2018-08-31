@@ -51,9 +51,9 @@
     </div>
     <span class="page-title">VIDEOS</span>
     <div class="title-content">
-        <a data-fancybox href="https://www.youtube.com/embed/z8M0Fa1JVco?showinfo=0">
-            <img class="title-frame" src="https://img.youtube.com/vi/z8M0Fa1JVco/maxresdefault.jpg" alt="">
-        </a>
+        <div class="video"><a data-fancybox href="https://www.youtube.com/embed/z8M0Fa1JVco?showinfo=0">
+                <img class="play-button" src="http://image.flaticon.com/icons/png/512/0/375.png"><img class="title-frame" src="https://img.youtube.com/vi/z8M0Fa1JVco/maxresdefault.jpg" alt="">
+            </a></div>
         <div class ="description">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
     </div>
@@ -68,7 +68,7 @@
             {padding:'pop-up',link: 'PZjGrmHdFME',style : 'frame frame_pad'}
         ]; %>
         <% step.forEach((item) => { %>
-        <a class="<%= item.padding; %>" data-fancybox href="https://youtu.be/<%= item.link; %>?showinfo=0"><img class="<%= item.style; %>" src="https://img.youtube.com/vi/<%= item.link; %>/maxresdefault.jpg" alt=""></a>
+        <div class="video"><a class="<%= item.padding; %>" data-fancybox href="https://youtu.be/<%= item.link; %>?showinfo=0"><img class="play-button" src="http://image.flaticon.com/icons/png/512/0/375.png"><img class="<%= item.style; %>" src="https://img.youtube.com/vi/<%= item.link; %>/maxresdefault.jpg" alt=""></a></div>
         <% }) %>
     </div>
     </div>
@@ -82,7 +82,7 @@
             {padding:'pop-up',link: 'kUfIVtyydgQ',style:'frame frame_pad'}
         ]; %>
         <% craft.forEach((item) => { %>
-        <a class="<%= item.padding; %>" data-fancybox href="https://youtu.be/<%= item.link; %>?showinfo=0"><img class="<%= item.style; %>" src="https://img.youtube.com/vi/<%= item.link; %>/maxresdefault.jpg" alt=""></a>
+        <div class="video"><a class="<%= item.padding; %>" data-fancybox href="https://youtu.be/<%= item.link; %>?showinfo=0"><img class="play-button" src="http://image.flaticon.com/icons/png/512/0/375.png"><img class="<%= item.style; %>" src="https://img.youtube.com/vi/<%= item.link; %>/maxresdefault.jpg" alt=""></a></div>
         <% }) %>
     </div>
     </div>
@@ -96,7 +96,7 @@
             {padding:'pop-up',link: '_wLGr24VeoI',style : 'frame frame_pad'}
         ]; %>
         <% inspiration.forEach((item) => { %>
-        <a class="<%= item.padding; %>" data-fancybox href="https://youtu.be/<%= item.link; %>?showinfo=0"><img class="<%= item.style; %>" src="https://img.youtube.com/vi/<%= item.link; %>/maxresdefault.jpg" alt=""></a>
+        <div class="video"><a class="<%= item.padding; %>" data-fancybox href="https://youtu.be/<%= item.link; %>?showinfo=0"><img class="play-button" src="http://image.flaticon.com/icons/png/512/0/375.png"><img class="<%= item.style; %>" src="https://img.youtube.com/vi/<%= item.link; %>/maxresdefault.jpg" alt=""></a></div>
         <% }) %>
     </div>
     <div class="load-button"><input class="button" type="button" value="LOAD MORE"></div>
