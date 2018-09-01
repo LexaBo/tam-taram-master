@@ -21,7 +21,7 @@
             <div class="menu__item"></div>
         </div>
         <div class="logo container-header__logo">
-            <img class="logo__img" src="img/logo.svg" alt="">
+            <a href="#"><img class="logo__img" src="img/logo.svg" alt=""></a>
         </div>
     </div>
     <div class="container-header__bottom">
@@ -49,30 +49,29 @@
 </nav>
 <main class="main">
     <div class="location">
-        HOME/<span class="red">VIDEOS</span>
+        HOME /<span class="red"> VIDEOS</span>
     </div>
     <span class="page-title">VIDEOS</span>
     <div class="title-content">
         <div class="video"><a data-fancybox href="https://www.youtube.com/embed/z8M0Fa1JVco?showinfo=0">
-                <img class="play-button play-button_big" src="img/playvideo.png"><img class="title-frame" src="https://img.youtube.com/vi/z8M0Fa1JVco/maxresdefault.jpg" alt="">
+                <img class="video__play-button video__play-button_big" src="img/playvideo.png"><img class="title-frame" src="https://img.youtube.com/vi/z8M0Fa1JVco/maxresdefault.jpg" alt="">
             </a></div>
         <div class ="description">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
         </div>
     </div>
-    <div class="border"><hr></div>
     <div class="section-name">STEP <span class="red">BY</span> STEP</div>
     <div class="content">
     <div class="thumb-wrap">
         <% const step = [
-            {padding:'pop-up',link: 'Wi2KcdoCuo4', style: 'frame',video:'video'},
-            {padding:'pop-up',link: '8H6dYUgQKB8', style: 'frame',video:'video'},
-            {padding:'pop-up',link: 'PZjGrmHdFME',style : 'frame',video:'video'},
-            {padding:'pop-up',link: 'DG4FAU5qmMY',style : 'frame',video:'video video_hide'}
+            {padding:'video__link',link: 'Wi2KcdoCuo4', style: 'video__frame',video:'video'},
+            {padding:'video__link',link: '8H6dYUgQKB8', style: 'video__frame',video:'video'},
+            {padding:'video__link',link: 'PZjGrmHdFME',style : 'video__frame',video:'video'},
+            {padding:'video__link',link: 'DG4FAU5qmMY',style : 'video__frame',video:'video video_hide'}
         ]; %>
         <% step.forEach((item) => { %>
-        <div class="<%= item.video; %>"><a class="<%= item.padding; %>" data-fancybox href="https://youtu.be/<%= item.link; %>?showinfo=0"><img class="play-button" src="img/playvideo.png"><img class="<%= item.style; %>" src="https://img.youtube.com/vi/<%= item.link; %>/maxresdefault.jpg" alt=""></a></div>
+        <div class="<%= item.video; %>"><a class="<%= item.padding; %>" data-fancybox href="https://youtu.be/<%= item.link; %>?showinfo=0"><img class="video__play-button" src="img/playvideo.png"><img class="<%= item.style; %>" src="https://img.youtube.com/vi/<%= item.link; %>/maxresdefault.jpg" alt=""></a></div>
         <% }) %>
     </div>
     </div>
@@ -81,13 +80,13 @@
    <div class="content">
     <div class="thumb-wrap">
         <% const craft = [
-            {padding:'pop-up',link: 'RmNWNLXmswk',style:'frame',video:'video'},
-            {padding:'pop-up',link: '-tztXOz8Vc0',style:'frame',video:'video'},
-            {padding:'pop-up',link: 'kUfIVtyydgQ',style:'frame',video:'video'},
-            {padding:'pop-up',link: '_wLGr24VeoI',style:'frame',video:'video video_hide'}
+            {padding:'video__link',link: 'RmNWNLXmswk',style:'video__frame',video:'video'},
+            {padding:'video__link',link: '-tztXOz8Vc0',style:'video__frame',video:'video'},
+            {padding:'video__link',link: 'kUfIVtyydgQ',style:'video__frame',video:'video'},
+            {padding:'video__link',link: '_wLGr24VeoI',style:'video__frame',video:'video video_hide'}
         ]; %>
         <% craft.forEach((item) => { %>
-        <div class="<%= item.video; %>"><a class="<%= item.padding; %>" data-fancybox href="https://youtu.be/<%= item.link; %>?showinfo=0"><img class="play-button" src="img/playvideo.png"><img class="<%= item.style; %>" src="https://img.youtube.com/vi/<%= item.link; %>/maxresdefault.jpg" alt=""></a></div>
+        <div class="<%= item.video; %>"><a class="<%= item.padding; %>" data-fancybox href="https://youtu.be/<%= item.link; %>?showinfo=0"><img class="video__play-button" src="img/playvideo.png"><img class="<%= item.style; %>" src="https://img.youtube.com/vi/<%= item.link; %>/maxresdefault.jpg" alt=""></a></div>
         <% }) %>
     </div>
     </div>
@@ -96,13 +95,13 @@
     <div class="content">
     <div class="thumb-wrap">
         <% const inspiration = [
-            {padding:'pop-up',link: 'VmmwwzR536g', style:'frame',video:'video'},
-            {padding:'pop-up',link: '6oPBFnsqJW8', style:'frame',video:'video'},
-            {padding:'pop-up',link: '_wLGr24VeoI', style:'frame',video:'video'},
-            {padding:'pop-up',link: 'PZjGrmHdFME', style:'frame',video:'video video_hide'}
+            {padding:'video__link',link: 'VmmwwzR536g', style:'video__frame',video:'video'},
+            {padding:'video__link',link: '6oPBFnsqJW8', style:'video__frame',video:'video'},
+            {padding:'video__link',link: '_wLGr24VeoI', style:'video__frame',video:'video'},
+            {padding:'video__link',link: 'PZjGrmHdFME', style:'video__frame',video:'video video_hide'}
         ]; %>
         <% inspiration.forEach((item) => { %>
-        <div class="<%= item.video; %>"><a class="<%= item.padding; %>" data-fancybox href="https://youtu.be/<%= item.link; %>?showinfo=0"><img class="play-button" src="img/playvideo.png"><img class="<%= item.style; %>" src="https://img.youtube.com/vi/<%= item.link; %>/maxresdefault.jpg" alt=""></a></div>
+        <div class="<%= item.video; %>"><a class="<%= item.padding; %>" data-fancybox href="https://youtu.be/<%= item.link; %>?showinfo=0"><img class="video__play-button" src="img/playvideo.png"><img class="<%= item.style; %>" src="https://img.youtube.com/vi/<%= item.link; %>/maxresdefault.jpg" alt=""></a></div>
         <% }) %>
     </div>
     <div class="load-button"><input class="button" type="button" value="LOAD MORE"></div>
@@ -128,7 +127,7 @@
         <span class="grey">LANGUEGE:</span>ENGLISH
     </div>
     <div class="support">
-        <a class="link" href="#"> PRIVACY POLICY</a> &nbsp;<a href="#" class="link">TERMS OF USE</a> &nbsp; <a href="#" class="link">CONTACT US</a><br>
+        <a class="link" href="#"> PRIVACY POLICY</a> &nbsp;<a href="#" class="link">TERMS OF USE</a> &nbsp;<br> <a href="#" class="link">CONTACT US</a>
         <a href="#" class="link">NEWSLETTER</a> &nbsp; <a href="#" class="link">SITE MAP</a>
     </div>
     </div>

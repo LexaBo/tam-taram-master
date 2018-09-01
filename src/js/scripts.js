@@ -93,7 +93,6 @@ $(document).ready(function () {
 });
 
 $('.menu').on('click', function() {
-    $("body").toggleClass("fixed");
     $('.navigation').slideToggle(300, function(){
         if( $(this).css('display') === "none"){
             $(this).removeAttr('style');

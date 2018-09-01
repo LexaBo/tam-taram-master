@@ -15,7 +15,7 @@
     margin: 0 auto;
 
     &__top {
-        padding: 23px 20px;
+        padding: 25px 20px;
 
         @media @tablet {
             position: absolute;
@@ -31,7 +31,7 @@
         justify-content: space-between;
 
         @media @tablet {
-            padding: 22px 25px 18px 16px;
+            padding: 22px 25px 18px 15px;
             background-color: #60c;
         }
 
@@ -44,6 +44,10 @@
 .logo {
     &__img{
         width: 235px;
+
+        @media @tablet{
+            width: 340px;
+        }
     }
 }
 
@@ -98,7 +102,7 @@
         background: #262626;
         display: flex;
         justify-content: center;
-        padding: 17px 25px 17px 16px;
+        padding: 17px 25px 17px 15px;
     }
 
     &__menu {
@@ -129,7 +133,7 @@
 
         @media @tablet {
             float: left;
-            margin-right: 24px;
+            margin-right: 23px;
         }
 
         @media @desktop {
@@ -139,8 +143,8 @@
 }
 
 .main {
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 10px;
+    padding-left: 10px;
     max-width: 1440px;
     margin: 0 auto;
 
@@ -148,16 +152,21 @@
         padding-right: 43px;
         padding-left: 43px;
     }
+
+    @media @desktop {
+        padding-right: 240px;
+        padding-left: 240px;
+    }
 }
 
 .location {
-    padding-top: 18px;
-    padding-bottom: 33px;
-    font-size: 14px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    font-size: 12px;
     font-family: 'PT Sans', sans-serif;
 
     @media @tablet {
-        padding-top: 42px;
+        padding-top: 40px;
         padding-bottom: 25px;
     }
 
@@ -174,16 +183,17 @@
 .page-title {
     display: inline-block;
     font-size: 28px;
-    padding-bottom: 18px;
+    margin-bottom: 18px;
     font-family: 'PT Sans', sans-serif;
     font-weight: 700;
 
     @media @tablet {
-        padding-bottom: 64px;
+        margin-bottom: 64px;
+        font-size: 64px;
     }
 
     @media @desktop {
-        padding-bottom: 32px;
+        margin-bottom: 32px;
     }
 }
 
@@ -201,6 +211,9 @@
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
+    border-bottom: solid 2px;
+    padding-bottom: 15px;
+    margin-bottom: 60px;
 }
 
 .thumb-wrap {
@@ -215,7 +228,7 @@
     }
 
     @media @large {
-        width: 943px;
+        width: 940px;
     }
 }
 
@@ -234,87 +247,49 @@
         margin: 0;
         padding: 0;
     }
-}
 
-.play-button{
-    width: 75px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 1000;
-    transform: translateY(-50%) translateX(-50%);
-    background-color: #cdcdcd;
-    border-radius: 50%;
-    opacity: .6;
+    &__play-button{
+        width: 25%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        background-color: #cdcdcd;
+        border-radius: 50%;
+        opacity: .6;
+    }
 
-    &_big{
+    &__link{
+        padding-top: 45px;
 
-        @media @tablet {
-            width: 115px;
+        &:first-child {
+            padding-top: 0;
+        }
+        @media @phone-large {
+            padding: 0;
+        }
+    }
+
+    &__frame {
+        width: 300px;
+
+        &:first-child {
+            padding-top: 0;
         }
     }
 }
 
+
 .title-frame {
-    width: 300px;
-    height: 150px;
-
-    @media @tablet {
-        width: 670px;
-        height: 345px;
-    }
-
-    @media @desktop {
-        width: 960px;
-        height: 495px;
-    }
-}
-
-.pop-up{
-    padding-top: 45px;
-
-    &:first-child {
-        padding-top: 0;
-    }
-    @media @phone-large {
-        padding: 0;
-    }
-}
-
-.frame {
-    width: 300px;
-
-    &:first-child {
-        padding-top: 0;
-    }
+    width: 100%;
+    height: auto;
 }
 
 .description {
+    display: inline-block;
     padding-top: 18px;
     font-family: 'PT Sans', sans-serif;
     font-weight: 700;
-
-    @media @tablet {
-        width: 670px;
-    }
-
-    @media @desktop {
-        width: 960px;
-    }
-}
-
-.border {
-    padding-top: 15px;
-    padding-bottom: 63px;
-    border-color: #686868;
-
-    @media @tablet {
-        padding-top: 20px;
-    }
-
-    @media @desktop {
-        padding-top: 28px;
-    }
 }
 
 .section-name {
@@ -322,6 +297,18 @@
     font-size: 30px;
     font-family: 'PT Sans', sans-serif;
     font-weight: bold;
+
+    @media @tablet {
+        margin-top: 90px;
+        padding-left: 27px;
+        padding-right: 27px;
+    }
+
+    @media @desktop {
+        margin-top: 70px;
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 .load-button {
@@ -355,8 +342,8 @@
     margin: 0 auto;
     margin-top: 40px;
     background-color: #262626;
-    padding-left: 18px;
-    padding-right: 18px;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
 .social {
@@ -366,25 +353,29 @@
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        padding-top: 16px;
+        padding-top: 20px;
+    }
+
+    &__icon{
+        margin-right: 15px;
     }
 }
 
 .svg {
     height: 20px;
-    margin-right: 20px;
 }
 
 .information {
     font-size: 12px;
     padding-top: 30px;
-    padding-bottom: 45px;
+    padding-bottom: 40px;
     color: #cdcdcd;
     font-family: 'PT Sans', sans-serif;
 
     @media @tablet {
         float: right;
-        padding: 15px 19px 23px 0;
+        padding: 15px 19px 20px 0;
+        text-align: right;
     }
 
     @media @desktop {
@@ -394,14 +385,13 @@
 
 .support {
     font-size: 12px;
-    padding-top: 30px;
     padding-bottom: 150px;
     color: #5b5b5b;
     font-family: 'PT Sans', sans-serif;
 
     @media @tablet {
         padding-top: 16px;
-        padding-bottom: 21px;
+        padding-bottom: 20px;
     }
 
     @media @desktop {
@@ -424,13 +414,15 @@
 }
 
 .slick-prev {
-    left: -45px;
+    left: -35px;
     transform: rotate(300deg);
+    cursor: pointer;
 }
 
 .slick-next {
-    right: -20px;
+    right: -25px;
     transform: rotate(45deg);
+    cursor: pointer;
 }
 
 .slick-arrow {
@@ -438,25 +430,20 @@
     top: 50%;
     transform: translateY(-50%);
     z-index: 1000;
-    display: inline-block;
-    width: 30px;
-    height: 30px;
     border-radius: 50%;
-    line-height: 30px;
     text-align: center;
     font-weight: bold;
-    cursor: pointer;
 }
 
 .arrow{
     transform: rotate(90deg);
-    height: 28px;
+    width: 18px;
 }
 
 
 .arrows {
     transform: rotate(-90deg);
-    height: 28px;
+    width: 18px;
 }
 
 .fixed {
