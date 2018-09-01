@@ -28,6 +28,7 @@ const slick = {
         this.cache();
         this.toggleSliders();
         this.events();
+
     },
     cache: function (){
         this.$sliders = $('.thumb-wrap');
@@ -35,12 +36,12 @@ const slick = {
     },
     events: function() {
         $(window).on('resize', function() {
-            TakeImgTransformToSvg();
             slick.toggleSliders();
+            TakeImgTransformToSvg();
         });
     },
     slickInit: function() {
-        slick.$sliders.slick({
+        slick.$sliders.not('.slick-initialized').slick({
             infinite: true,
             arrows:true,
             prevArrow:'<span class="slick-prev"><img class="svg arrow" src="img/ico_dropdown.svg" alt=""></span>',
@@ -89,7 +90,6 @@ const slick = {
 $(document).ready(function () {
     slick.init();
     TakeImgTransformToSvg();
-
 });
 
 $('.menu').on('click', function() {
