@@ -13,26 +13,28 @@
 </head>
 <body>
 <header class="header">
-    <div class="header__top">
+    <div class="container-header">
+    <div class="container-header__top">
         <div class="menu">
             <div class="menu__item"></div>
             <div class="menu__item menu__item_center"></div>
             <div class="menu__item"></div>
         </div>
-        <div class="logo header__logo">
+        <div class="logo container-header__logo">
             <img class="logo__img" src="img/logo.svg" alt="">
         </div>
     </div>
-    <div class="header__bottom">
+    <div class="container-header__bottom">
         <div class="salon-information">
             NEAREST SALON
             <img class="ico mark" src="img/ico_dropdown.svg" alt="">
             <br>
             Plush Salon 92101
         </div>
-        <div class="search header__search">
+        <div class="search container-header__search">
             <img class="ico search__ico" src="img/ico_search.svg" alt="">
         </div>
+    </div>
     </div>
 </header>
 <nav class="navigation">
@@ -52,23 +54,25 @@
     <span class="page-title">VIDEOS</span>
     <div class="title-content">
         <div class="video"><a data-fancybox href="https://www.youtube.com/embed/z8M0Fa1JVco?showinfo=0">
-                <img class="play-button" src="http://image.flaticon.com/icons/png/512/0/375.png"><img class="title-frame" src="https://img.youtube.com/vi/z8M0Fa1JVco/maxresdefault.jpg" alt="">
+                <img class="play-button play-button_big" src="img/playvideo.png"><img class="title-frame" src="https://img.youtube.com/vi/z8M0Fa1JVco/maxresdefault.jpg" alt="">
             </a></div>
         <div class ="description">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    </div>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </div>
     </div>
     <div class="border"><hr></div>
     <div class="section-name">STEP <span class="red">BY</span> STEP</div>
     <div class="content">
     <div class="thumb-wrap">
         <% const step = [
-            {padding:'pop-up',link: 'Wi2KcdoCuo4', style: 'frame'},
-            {padding:'pop-up',link: '8H6dYUgQKB8', style: 'frame frame_pad'},
-            {padding:'pop-up',link: 'PZjGrmHdFME',style : 'frame frame_pad'}
+            {padding:'pop-up',link: 'Wi2KcdoCuo4', style: 'frame',video:'video'},
+            {padding:'pop-up',link: '8H6dYUgQKB8', style: 'frame',video:'video'},
+            {padding:'pop-up',link: 'PZjGrmHdFME',style : 'frame',video:'video'},
+            {padding:'pop-up',link: 'DG4FAU5qmMY',style : 'frame',video:'video video_hide'}
         ]; %>
         <% step.forEach((item) => { %>
-        <div class="video"><a class="<%= item.padding; %>" data-fancybox href="https://youtu.be/<%= item.link; %>?showinfo=0"><img class="play-button" src="http://image.flaticon.com/icons/png/512/0/375.png"><img class="<%= item.style; %>" src="https://img.youtube.com/vi/<%= item.link; %>/maxresdefault.jpg" alt=""></a></div>
+        <div class="<%= item.video; %>"><a class="<%= item.padding; %>" data-fancybox href="https://youtu.be/<%= item.link; %>?showinfo=0"><img class="play-button" src="img/playvideo.png"><img class="<%= item.style; %>" src="https://img.youtube.com/vi/<%= item.link; %>/maxresdefault.jpg" alt=""></a></div>
         <% }) %>
     </div>
     </div>
@@ -77,12 +81,13 @@
    <div class="content">
     <div class="thumb-wrap">
         <% const craft = [
-            {padding:'pop-up',link: 'RmNWNLXmswk',style:'frame'},
-            {padding:'pop-up',link: '-tztXOz8Vc0',style:'frame frame_pad'},
-            {padding:'pop-up',link: 'kUfIVtyydgQ',style:'frame frame_pad'}
+            {padding:'pop-up',link: 'RmNWNLXmswk',style:'frame',video:'video'},
+            {padding:'pop-up',link: '-tztXOz8Vc0',style:'frame',video:'video'},
+            {padding:'pop-up',link: 'kUfIVtyydgQ',style:'frame',video:'video'},
+            {padding:'pop-up',link: '_wLGr24VeoI',style:'frame',video:'video video_hide'}
         ]; %>
         <% craft.forEach((item) => { %>
-        <div class="video"><a class="<%= item.padding; %>" data-fancybox href="https://youtu.be/<%= item.link; %>?showinfo=0"><img class="play-button" src="http://image.flaticon.com/icons/png/512/0/375.png"><img class="<%= item.style; %>" src="https://img.youtube.com/vi/<%= item.link; %>/maxresdefault.jpg" alt=""></a></div>
+        <div class="<%= item.video; %>"><a class="<%= item.padding; %>" data-fancybox href="https://youtu.be/<%= item.link; %>?showinfo=0"><img class="play-button" src="img/playvideo.png"><img class="<%= item.style; %>" src="https://img.youtube.com/vi/<%= item.link; %>/maxresdefault.jpg" alt=""></a></div>
         <% }) %>
     </div>
     </div>
@@ -91,18 +96,20 @@
     <div class="content">
     <div class="thumb-wrap">
         <% const inspiration = [
-            {padding:'pop-up',link: 'VmmwwzR536g', style: 'frame'},
-            {padding:'pop-up',link: '6oPBFnsqJW8', style: 'frame frame_pad'},
-            {padding:'pop-up',link: '_wLGr24VeoI',style : 'frame frame_pad'}
+            {padding:'pop-up',link: 'VmmwwzR536g', style:'frame',video:'video'},
+            {padding:'pop-up',link: '6oPBFnsqJW8', style:'frame',video:'video'},
+            {padding:'pop-up',link: '_wLGr24VeoI', style:'frame',video:'video'},
+            {padding:'pop-up',link: 'PZjGrmHdFME', style:'frame',video:'video video_hide'}
         ]; %>
         <% inspiration.forEach((item) => { %>
-        <div class="video"><a class="<%= item.padding; %>" data-fancybox href="https://youtu.be/<%= item.link; %>?showinfo=0"><img class="play-button" src="http://image.flaticon.com/icons/png/512/0/375.png"><img class="<%= item.style; %>" src="https://img.youtube.com/vi/<%= item.link; %>/maxresdefault.jpg" alt=""></a></div>
+        <div class="<%= item.video; %>"><a class="<%= item.padding; %>" data-fancybox href="https://youtu.be/<%= item.link; %>?showinfo=0"><img class="play-button" src="img/playvideo.png"><img class="<%= item.style; %>" src="https://img.youtube.com/vi/<%= item.link; %>/maxresdefault.jpg" alt=""></a></div>
         <% }) %>
     </div>
     <div class="load-button"><input class="button" type="button" value="LOAD MORE"></div>
     </div>
 </main>
 <footer class="footer">
+   <div class="container-footer">
 <div class="social">
     <% const social = [
         {title: 'img/ico_facebook.svg', link: '#'},
@@ -123,6 +130,7 @@
     <div class="support">
         <a class="link" href="#"> PRIVACY POLICY</a> &nbsp;<a href="#" class="link">TERMS OF USE</a> &nbsp; <a href="#" class="link">CONTACT US</a><br>
         <a href="#" class="link">NEWSLETTER</a> &nbsp; <a href="#" class="link">SITE MAP</a>
+    </div>
     </div>
 </footer>
 <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>

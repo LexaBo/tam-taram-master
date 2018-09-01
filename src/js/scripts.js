@@ -41,8 +41,6 @@ const slick = {
     },
     slickInit: function() {
         slick.$sliders.slick({
-            slidesToShow: 2,
-            slidesToScroll: 1,
             infinite: true,
             arrows:true,
             prevArrow:'<span class="slick-prev"><img class="svg arrow" src="img/ico_dropdown.svg" alt=""></span>',
@@ -56,8 +54,19 @@ const slick = {
 
                 {
                     breakpoint: 768,
-                    settings:'slick'
+                    settings:{
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                    }
                 },
+
+                {
+                    breakpoint: 1145,
+                    settings:{
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                    }
+                }
             ]
         });
     },

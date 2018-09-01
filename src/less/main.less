@@ -5,8 +5,14 @@
     padding: 0;
 }
 
-.header {
+.header{
     background-color: #60c;
+}
+
+.container-header {
+    background-color: #60c;
+    max-width: 1440px;
+    margin: 0 auto;
 
     &__top {
         padding: 23px 20px;
@@ -79,6 +85,7 @@
 }
 
 .navigation {
+    z-index: 1000;
     @media @phone {
         display: none;
         position: absolute;
@@ -134,6 +141,8 @@
 .main {
     padding-right: 15px;
     padding-left: 15px;
+    max-width: 1440px;
+    margin: 0 auto;
 
     @media @tablet {
         padding-right: 43px;
@@ -204,14 +213,31 @@
         width: 625px;
         flex-wrap: wrap;
     }
+
+    @media @large {
+        width: 943px;
+    }
 }
 
 .video{
     position: relative;
+    margin-top: 45px;
+
+    &_hide{
+        display: none;
+    }
+
+    &:first-child {
+        margin-top: 0;
+    }
+    @media @phone-large {
+        margin: 0;
+        padding: 0;
+    }
 }
 
 .play-button{
-    width: 64px;
+    width: 75px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -219,7 +245,14 @@
     transform: translateY(-50%) translateX(-50%);
     background-color: #cdcdcd;
     border-radius: 50%;
-    opacity: .8;
+    opacity: .6;
+
+    &_big{
+
+        @media @tablet {
+            width: 115px;
+        }
+    }
 }
 
 .title-frame {
@@ -273,6 +306,7 @@
 .border {
     padding-top: 15px;
     padding-bottom: 63px;
+    border-color: #686868;
 
     @media @tablet {
         padding-top: 20px;
@@ -312,7 +346,13 @@
     margin-bottom: 90px;
 }
 
-.footer {
+.footer{
+    background-color: #262626;
+}
+
+.container-footer {
+    max-width: 1440px;
+    margin: 0 auto;
     margin-top: 40px;
     background-color: #262626;
     padding-left: 18px;
