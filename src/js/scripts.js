@@ -25,23 +25,19 @@ function TakeImgTransformToSvg(){
 }
 const slick = {
     init: function() {
-        this.cache();
         this.toggleSliders();
         this.events();
 
     },
-    cache: function (){
-        this.$sliders = $('.thumb-wrap');
-        this.slickInited = false;
-    },
+
     events: function() {
         $(window).on('resize', function() {
-            slick.toggleSliders();
             TakeImgTransformToSvg();
+            slick.toggleSliders();
         });
     },
     slickInit: function() {
-        slick.$sliders.not('.slick-initialized').slick({
+        $('.thumb-wrap').not('.slick-initialized').slick({
             infinite: true,
             arrows:true,
             prevArrow:'<span class="slick-prev"><img class="svg arrow" src="img/ico_dropdown.svg" alt=""></span>',
@@ -71,19 +67,12 @@ const slick = {
             ]
         });
     },
-    slickDestroy: function() {
-        this.$sliders.slick('unslick');
-        this.slickInited = false;
-    },
+
     toggleSliders: function () {
         if ($(window).width() > 768) {
-
-            if (!slick.slickInited) {
-                slick.slickInit();
-            }
-        } else if(slick.slickInited) {
-            slick.slickDestroy();
+            slick.slickInit();
         }
+
     }
 };
 
