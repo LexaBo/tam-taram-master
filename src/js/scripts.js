@@ -32,7 +32,6 @@ const slick = {
 
     events: function() {
         $(window).on('resize', function() {
-            TakeImgTransformToSvg();
             slick.toggleSliders();
         });
     },
@@ -40,8 +39,8 @@ const slick = {
         $('.thumb-wrap').not('.slick-initialized').slick({
             infinite: true,
             arrows:true,
-            prevArrow:'<span class="slick-prev"><img class="svg arrow" src="img/ico_dropdown.svg" alt=""></span>',
-            nextArrow:'<span class="slick-next"><img class="svg arrows" src="img/ico_dropdown.svg" alt=""></span>',
+            prevArrow:'<span class="slick-prev"><img class="arrow" src="img/ico_dropdown_grey.svg" alt=""></span>',
+            nextArrow:'<span class="slick-next"><img class="arrows" src="img/ico_dropdown_grey.svg" alt=""></span>',
             mobileFirst: true,
             responsive: [
                 {
