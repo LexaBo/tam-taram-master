@@ -121,7 +121,7 @@
             text-align: left;
         }
 
-        &:focus {
+        &:hover {
             color: red;
         }
     }
@@ -257,6 +257,12 @@
         background-color: #cdcdcd;
         border-radius: 50%;
         opacity: .6;
+
+        &_big{
+            @media @tablet {
+                width: 15%;
+            }
+        }
     }
 
     &__link{
@@ -407,6 +413,10 @@
 .link {
     text-decoration: none;
     color: inherit;
+
+    &:hover{
+        color: white;
+    }
 }
 
 .slick-prev {

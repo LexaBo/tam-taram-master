@@ -53,9 +53,12 @@
     </div>
     <span class="page-title">VIDEOS</span>
     <div class="title-content">
-        <div class="video"><a data-fancybox href="https://www.youtube.com/embed/z8M0Fa1JVco?showinfo=0">
-                <img class="video__play-button video__play-button_big" src="img/playvideo.png"><img class="title-frame" src="https://img.youtube.com/vi/z8M0Fa1JVco/maxresdefault.jpg" alt="">
-            </a></div>
+        <div class="video">
+            <a data-fancybox href="https://www.youtube.com/embed/z8M0Fa1JVco?showinfo=0">
+                <img class="video__play-button video__play-button_big" src="img/playvideo.png">
+                <img class="title-frame" src="https://img.youtube.com/vi/z8M0Fa1JVco/maxresdefault.jpg" alt="">
+            </a>
+        </div>
         <div class ="description">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -71,7 +74,12 @@
             {linkClass:'video__link',link: 'DG4FAU5qmMY',imgStyle:'video__frame',divClass:'video video_hide'}
         ]; %>
         <% step.forEach((item) => { %>
-        <div class="<%= item.divClass; %>"><a class="<%= item.linkClass; %>" data-fancybox href="https://youtu.be/<%= item.link; %>?showinfo=0"><img class="video__play-button" src="img/playvideo.png"><img class="<%= item.imgStyle; %>" src="https://img.youtube.com/vi/<%= item.link; %>/maxresdefault.jpg" alt=""></a></div>
+        <div class="<%= item.divClass; %>">
+            <a class="<%= item.linkClass; %>" data-fancybox href="https://youtu.be/<%= item.link; %>?showinfo=0">
+                <img class="video__play-button" src="img/playvideo.png">
+                <img class="<%= item.imgStyle; %>" src="https://img.youtube.com/vi/<%= item.link; %>/maxresdefault.jpg" alt="">
+            </a>
+        </div>
         <% }) %>
     </div>
     </div>
@@ -86,7 +94,12 @@
             {linkClass:'video__link',link: '_wLGr24VeoI',imgStyle:'video__frame',divClass:'video video_hide'}
         ]; %>
         <% craft.forEach((item) => { %>
-        <div class="<%= item.divClass; %>"><a class="<%= item.linkClass; %>" data-fancybox href="https://youtu.be/<%= item.link; %>?showinfo=0"><img class="video__play-button" src="img/playvideo.png"><img class="<%= item.imgStyle; %>" src="https://img.youtube.com/vi/<%= item.link; %>/maxresdefault.jpg" alt=""></a></div>
+        <div class="<%= item.divClass; %>">
+            <a class="<%= item.linkClass; %>" data-fancybox href="https://youtu.be/<%= item.link; %>?showinfo=0">
+                <img class="video__play-button" src="img/playvideo.png">
+                <img class="<%= item.imgStyle; %>" src="https://img.youtube.com/vi/<%= item.link; %>/maxresdefault.jpg" alt="">
+            </a>
+        </div>
         <% }) %>
     </div>
     </div>
@@ -101,7 +114,12 @@
             {linkClass:'video__link',link: 'PZjGrmHdFME', imgStyle:'video__frame',divClass:'video video_hide'}
         ]; %>
         <% inspiration.forEach((item) => { %>
-        <div class="<%= item.divClass; %>"><a class="<%= item.linkClass; %>" data-fancybox href="https://youtu.be/<%= item.link; %>?showinfo=0"><img class="video__play-button" src="img/playvideo.png"><img class="<%= item.imgStyle; %>" src="https://img.youtube.com/vi/<%= item.link; %>/maxresdefault.jpg" alt=""></a></div>
+        <div class="<%= item.divClass; %>">
+            <a class="<%= item.linkClass; %>" data-fancybox href="https://youtu.be/<%= item.link; %>?showinfo=0">
+                <img class="video__play-button" src="img/playvideo.png">
+                <img class="<%= item.imgStyle; %>" src="https://img.youtube.com/vi/<%= item.link; %>/maxresdefault.jpg" alt="">
+            </a>
+        </div>
         <% }) %>
     </div>
     <div class="load-button"><input class="button" type="button" value="LOAD MORE"></div>
@@ -127,7 +145,9 @@
         <span class="grey">LANGUEGE:</span>ENGLISH
     </div>
     <div class="support">
-        <a class="link" href="#"> PRIVACY POLICY</a> &nbsp;<a href="#" class="link">TERMS OF USE</a> &nbsp;<br> <a href="#" class="link">CONTACT US</a>
+        <a class="link" href="#"> PRIVACY POLICY</a> &nbsp;<a href="#" class="link">TERMS OF USE</a> &nbsp;
+        <br>
+        <a href="#" class="link">CONTACT US</a>
         <a href="#" class="link">NEWSLETTER</a> &nbsp; <a href="#" class="link">SITE MAP</a>
     </div>
     </div>
