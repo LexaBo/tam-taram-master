@@ -12,6 +12,9 @@
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
 </head>
 <body>
+
+
+
 <header class="header">
     <div class="container-header">
     <div class="container-header__top">
@@ -21,7 +24,7 @@
             <div class="menu__item"></div>
         </div>
         <div class="logo container-header__logo">
-            <a href="#"><img class="logo__img" src="img/logo.svg" alt=""></a>
+            <a href="#"><svg class = "logo__img"><%- include('img/logo.svg'); %></svg></a>
         </div>
     </div>
     <div class="container-header__bottom">
@@ -32,7 +35,7 @@
             Plush Salon 92101
         </div>
         <div class="search container-header__search">
-            <img class="ico search__ico" src="img/ico_search.svg" alt="">
+            <svg class="ico search__ico"><%- include('img/ico_search.svg'); %></svg>
         </div>
     </div>
     </div>
@@ -128,16 +131,11 @@
 <footer class="footer">
    <div class="container-footer">
 <div class="social">
-    <% const social = [
-        {title: 'img/ico_facebook.svg', link: '#'},
-        {title: 'img/ico_twitter.svg', link: '#'},
-        {title: 'img/ico_pinterest.svg', link: '#'},
-        {title: 'img/ico_youtube.svg', link: '#'},
-        {title: 'img/ico_instagram.svg', link: '#'}
-    ]; %>
-    <% social.forEach((item) => { %>
-    <a class="social__icon" href="<%= item.link; %>"><img class="svg" src="<%= item.title; %>" alt=""></a>
-    <% }) %>
+        <a class="social__icon" href="#"><svg class="svg"><%- include('img/ico_facebook.svg'); %></svg></a>
+        <a class="social__icon" href="#"><svg class="svg"><%- include('img/ico_twitter.svg'); %></svg></a>
+        <a class="social__icon" href="#"><svg class="svg"><%- include('img/ico_pinterest.svg'); %></svg></a>
+        <a class="social__icon" href="#"><svg class="svg"><%- include('img/ico_youtube.svg'); %></svg></a>
+        <a class="social__icon" href="#"><svg class="svg"><%- include('img/ico_instagram.svg'); %></svg></a>
 </div>
     <div class="information">
         <span class="grey">LOCATION:</span>UNITED STATES

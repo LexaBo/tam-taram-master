@@ -15,8 +15,8 @@ const slick = {
         $('.thumb-wrap').not('.slick-initialized').slick({
             infinite: true,
             arrows:true,
-            prevArrow:'<span class="slick-prev"><img class="arrow" src="img/ico_dropdown_grey.svg" alt=""></span>',
-            nextArrow:'<span class="slick-next"><img class="arrows" src="img/ico_dropdown_grey.svg" alt=""></span>',
+            prevArrow:'<span class="slick-prev"><img class="arrow" src="../img/ico_dropdown_grey.svg" alt=""></span>',
+            nextArrow:'<span class="slick-next"><img class="arrows" src="../img/ico_dropdown_grey.svg" alt=""></span>',
             mobileFirst: true,
             responsive: [
                 {
@@ -57,7 +57,7 @@ $(document).ready(function () {
 
 $('.menu').on('click', function() {
     $('.navigation').slideToggle(300, function(){
-        if( $(this).css('display') === "none"){
+        if( $(this).css('display') === 'none'){
             $(this).removeAttr('style');
         }
     });

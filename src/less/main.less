@@ -15,7 +15,7 @@
     margin: 0 auto;
 
     &__top {
-        padding: 25px 20px;
+        padding: 19px 20px;
 
         @media @tablet {
             position: absolute;
@@ -44,9 +44,17 @@
 .logo {
     &__img{
         width: 235px;
+        height: 19px;
+        fill: white;
+
+        &:hover{
+            fill: black;
+        }
+
 
         @media @tablet{
             width: 340px;
+            height: 25px;
         }
     }
 }
@@ -81,6 +89,14 @@
     &__ico {
         width: 23px;
         height: 24px;
+        cursor: pointer;
+        fill: white;
+        stroke: white;
+
+        &:hover{
+            fill: black;
+            stroke: black;
+        }
     }
 }
 
@@ -369,6 +385,12 @@
 
 .svg {
     height: 20px;
+    width: 20px;
+    fill: #cdcdcd;
+
+    &:hover{
+        fill: brown;
+    }
 }
 
 .information {
