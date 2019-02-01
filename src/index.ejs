@@ -35,7 +35,14 @@
             Plush Salon 92101
         </div>
         <div class="search container-header__search">
-            <svg class="ico search__ico"><%- include('img/ico_search.svg'); %></svg>
+            <a data-fancybox href="#form">
+                <svg class="ico search__ico"><%- include('img/ico_search.svg'); %></svg>
+            </a>
+            <form id = 'form'  style="display:none">
+                Поиск по сайту<br>
+                <input type="text" name="input" value="">
+                <input type="submit" name = "submit" value = 'Найти'>
+            </form>
         </div>
     </div>
     </div>
